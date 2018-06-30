@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.FXMLMostraResultadosDePesquisaController">
+   <children>
+      <ImageView fitHeight="925.0" fitWidth="1298.0" layoutX="-9.0" layoutY="-194.0" onMouseMoved="#retornaACorDosPane">
+         <image>
+            <Image url="@../imagens/Blue-lines-abstract-ppt.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="111.0" layoutX="115.0" layoutY="103.0" onMouseMoved="#retornaACorDosPane" opacity="0.55" stroke="#ffffff00" strokeType="INSIDE" width="1050.0">
+         <effect>
+            <BoxBlur height="74.82" iterations="2" width="255.0" />
+         </effect>
+      </Rectangle>
+      <ListView fx:id="lvResultado" layoutX="116.0" layoutY="154.0" onMouseMoved="#retornaACorDosPane" prefHeight="391.0" prefWidth="1050.0">
+         <effect>
+            <DropShadow />
+         </effect></ListView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="45.0" layoutX="116.0" layoutY="109.0" onMouseMoved="#retornaACorDosPane" stroke="#00000093" strokeType="INSIDE" width="1050.0">
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" height="17.79" radius="9.1975" />
+         </effect>
+      </Rectangle>
+      <Text fx:id="txtTitulo" fill="WHITE" layoutX="526.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Resultado da pesquisa" textAlignment="CENTER">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="92.0" fitWidth="428.0" layoutX="426.0" layoutY="577.0" onMouseMoved="#retornaACorDosPane">
+         <image>
+            <Image url="@../imagens/img.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="122.0" layoutY="106.0" onMouseClicked="#btnApagarSelecionadoClick" onMouseMoved="#btnApagarDragged">
+         <children>
+            <Rectangle fx:id="paneApagar" arcHeight="5.0" arcWidth="5.0" fill="#0d569a" height="52.0" stroke="#00000091" strokeType="INSIDE" width="70.0" />
+            <Text fill="WHITE" layoutX="13.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apagar">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="199.0" layoutY="106.0" onMouseClicked="#btnDetalhesSelecionadoClick" onMouseMoved="#btnDetalhesDragged" onMousePressed="#btnDetalhesClick">
+         <children>
+            <Rectangle fx:id="paneDetalhes" arcHeight="5.0" arcWidth="5.0" fill="#0d569a" height="52.0" stroke="#00000091" strokeType="INSIDE" width="70.0" />
+            <Text fill="WHITE" layoutX="9.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Detalhes">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="276.0" layoutY="106.0" onMouseClicked="#btnModificarSelecionadoClick" onMouseMoved="#btnModificarDragged">
+         <children>
+            <Rectangle fx:id="paneModificar" arcHeight="5.0" arcWidth="5.0" fill="#0d569a" height="52.0" stroke="#00000091" strokeType="INSIDE" width="70.0" />
+            <Text fill="WHITE" layoutX="5.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modificar">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="353.0" layoutY="106.0" onMouseClicked="#btnClickVoltarMenu" onMouseMoved="#btnVoltarPassou">
+         <children>
+            <Rectangle fx:id="paneVoltar" arcHeight="5.0" arcWidth="5.0" fill="#0d569a" height="52.0" stroke="#00000091" strokeType="INSIDE" width="70.0" />
+            <Text fill="WHITE" layoutX="16.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Voltar">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane fx:id="paneCbSelection" layoutX="976.0" layoutY="102.0" visible="false">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0d569a" height="58.0" stroke="#00000091" strokeType="INSIDE" width="183.0" />
+            <ComboBox fx:id="cbSelecionar" layoutX="5.0" layoutY="24.0" onAction="#cbSelecionou" prefHeight="25.0" prefWidth="173.0" promptText="Selecione um município" />
+            <Text fill="WHITE" layoutX="62.0" layoutY="15.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Municipio">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

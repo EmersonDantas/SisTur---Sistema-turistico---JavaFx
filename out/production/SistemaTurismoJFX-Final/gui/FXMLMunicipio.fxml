@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.FXMLMunicipioController">
+   <children>
+      <ImageView fitHeight="879.0" fitWidth="1563.0" layoutX="-29.0" layoutY="-140.0">
+         <image>
+            <Image url="@../imagens/turismo-no-Brasil-Salvador.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="273.0" layoutY="247.0" opacity="0.72" stroke="TRANSPARENT" strokeType="INSIDE" width="1171.0">
+         <fill>
+            <LinearGradient endX="0.14285714285714285" endY="0.5047619047619047" startX="1.0" startY="0.49047619047619045">
+               <stops>
+                  <Stop color="#e1f2ffdb" />
+                  <Stop color="#a2dba3" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#075175" height="669.0" layoutX="39.0" layoutY="25.0" stroke="TRANSPARENT" strokeType="INSIDE" width="430.0" />
+      <ImageView fitHeight="99.0" fitWidth="504.0" layoutX="576.0" layoutY="334.0">
+         <image>
+            <Image url="@../imagens/img.png" />
+         </image>
+         <effect>
+            <InnerShadow choke="0.16" radius="4.75" width="0.0" />
+         </effect>
+      </ImageView>
+      <TextField fx:id="textNome" layoutX="101.0" layoutY="184.0" prefHeight="25.0" prefWidth="305.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextField>
+      <TextField fx:id="textPopulacao" layoutX="101.0" layoutY="258.0" prefHeight="25.0" prefWidth="305.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextField>
+      <TextField fx:id="textEstado" layoutX="101.0" layoutY="330.0" prefHeight="25.0" prefWidth="305.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextField>
+      <TextField fx:id="textLatitude" layoutX="101.0" layoutY="400.0" prefHeight="25.0" prefWidth="305.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextField>
+      <TextField fx:id="textLongitude" layoutX="101.0" layoutY="472.0" prefHeight="25.0" prefWidth="305.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextField>
+      <TextField fx:id="textSite" layoutX="101.0" layoutY="535.0" prefHeight="25.0" prefWidth="305.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextField>
+      <Button layoutX="336.0" layoutY="640.0" mnemonicParsing="false" onAction="#btnCadastrarMunicipio" prefHeight="25.0" prefWidth="70.0" text="Cadastrar">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button layoutX="271.0" layoutY="640.0" mnemonicParsing="false" onAction="#btnVoltarClick" prefHeight="25.0" prefWidth="60.0" text="Voltar">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Text fill="WHITE" layoutX="182.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Novo municipio">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtNome" fill="WHITE" layoutX="102.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Text>
+      <Text fx:id="txtPopulacao" fill="WHITE" layoutX="102.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="População:">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Text>
+      <Text fx:id="txtEstado" fill="WHITE" layoutX="102.0" layoutY="314.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estado:">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Text>
+      <Text fx:id="txtLatitude" fill="WHITE" layoutX="102.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Latitude:">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Text>
+      <Text fx:id="txtLongitude" fill="WHITE" layoutX="102.0" layoutY="456.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Longitude:">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Text>
+      <Text fx:id="txtSite" fill="WHITE" layoutX="102.0" layoutY="526.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Site:">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Text>
+   </children>
+</AnchorPane>
